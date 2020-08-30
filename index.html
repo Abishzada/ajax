@@ -35,7 +35,6 @@
             }).done(function (result) {
                 let obj = JSON.parse(result)
                 obj.students.forEach(student => {
-                    $('#list').html(' ')
                     $('#list').html('<li>' + student + '</li>')
                 })
             })
