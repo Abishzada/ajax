@@ -39,8 +39,13 @@
     </script>
 
     <script>
-        $('#load').ready(function() {
-            
+        $('#load').on('click', function (){
+            let a = $.ajax({
+                url: '/ajax/items.html'
+            })
+            a.done(function(cavab){
+                $('#list').append(cavab)
+            })
         })
     </script>
 </body>
