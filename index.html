@@ -39,14 +39,14 @@
     </script>
 
     <script>
-        $('#load').on('click', function (){
+       
             $.ajax({
                 url: '/ajax/items.html'
             }).done(function(result){
                 $('#list').html(result)
             })
             
-        })
+    
     </script>
 </body>
 
