@@ -33,7 +33,10 @@
             $.ajax({
                 url: '/ajax/items.html'
             }).done(function (result) {
-                console.log(result)
+                let obj = JSON.parse(result)
+                obj.students.foreach(function(index,value){
+                    $('#list').append('<li>'+value+'</li>')
+                })
             })
         })
     </script>
