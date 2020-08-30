@@ -40,12 +40,13 @@
 
     <script>
         $('#load').on('click', function (){
-            let a = $.ajax({
-                url: '/ajax/items.html'
+            $.ajax({
+                url: '/ajax/items.html',
+                success: function(result) {
+                    $('#list').html(cavab)
+                }
             })
-            a.done(function(cavab){
-                $('#list').html(cavab)
-            })
+            
         })
     </script>
 </body>
