@@ -39,14 +39,13 @@
     </script>
 
     <script>
-       
+        $(document).ready(function () {
             $.ajax({
                 url: '/ajax/items.html'
-            }).done(function(result){
+            }).done(function (result) {
                 $('#list').html(result)
             })
-            
-    
+        })
     </script>
 </body>
 
