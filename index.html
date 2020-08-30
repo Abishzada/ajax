@@ -35,7 +35,7 @@
                 type: 'JSON'
             }).done(function (result) {
                 
-                obj.students.forEach(function (index, value) {
+                result.students.forEach(function (index, value) {
                     console.log(value)
                     $('#list').append('<li>' + value + '</li>')
                 })
