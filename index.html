@@ -32,8 +32,9 @@
         $('#load').on('click', function () {
             $.ajax({
                 url: '/ajax/items.html'
+                type: 'JSON'
             }).done(function (result) {
-                let obj = JSON.parse(result)
+                
                 obj.students.forEach(function (index, value) {
                     console.log(value)
                     $('#list').append('<li>' + value + '</li>')
