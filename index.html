@@ -29,14 +29,14 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script>
-        $('#load').on('click' , function () {
+        $('#load').on('click', function () {
             $.ajax({
                 url: '/ajax/items.html'
             }).done(function (result) {
                 let obj = JSON.parse(result)
-                obj.students.array.forEach(index, value => {
-                    $('#list').append('<li>'+value+'</li>')
-                });
+                obj.students.forEach(function (index, value) {
+                    $('#list').append('<li>' + value + '</li>')
+                })
             })
         })
     </script>
