@@ -32,12 +32,12 @@
         $('#load').on('click', function () {
             $.ajax({
                 url: '/ajax/items.html',
-                type: 'JSON'
+                type: 'JSON',
             }).done(function (result) {
 
                 result.students.forEach(student => {
-                    console.log(student)
-                    $('#list').append('<li>' + student + '</li>')
+                    $('#list').html(' ')
+                    $('#list').html('<li>' + student + '</li>')
                 })
             })
         })
