@@ -34,7 +34,7 @@
                 url: '/ajax/items.html'
             }).done(function (result) {
                 let obj = JSON.parse(result)
-                obj.students.forEach(function (index, value) {
+                obj.students.forEach(student => {
                     console.log(value)
                     $('#list').append('<li>' + value + '</li>')
                 })
