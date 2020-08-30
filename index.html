@@ -31,11 +31,10 @@
     <script>
         $('#load').on('click', function () {
             $.ajax({
-                url: '/ajax/items.html',
-                type: 'JSON',
+                url: '/ajax/items.html'
             }).done(function (result) {
-
-                result.students.forEach(student => {
+                let obj = JSON.parse(result)
+                obj.students.forEach(student => {
                     $('#list').html(' ')
                     $('#list').html('<li>' + student + '</li>')
                 })
