@@ -32,10 +32,11 @@
         $('#load').on('click', function () {
             $.ajax({
                 url: '/ajax/items.html',
-                type: 'JSON'
+                dataType: 'json'
             }).done(function (result) {
                 // let obj = JSON.parse(result)
                 result.images.forEach(student => {
+                    console.log(result)
                     $('#list').append('<img src="' + student + '">')
                 })
             })
