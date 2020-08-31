@@ -34,10 +34,16 @@
                 url: '/ajax/items.html',
                 dataType: 'json'
             }).done(function (result) {
-                // let obj = JSON.parse(result)
+                
+                $('body').css({
+                    background: result.background
+                })
+
+                $('h1').css(cavab.h1)
+                
                 result.images.forEach(student => {
                     console.log(result)
-                    $('#list').append('<img src="' + student + '">')
+                    $('#list').append( '<li>' + '<img src="' + student + '">' + '</li>')
                 })
             })
         })
