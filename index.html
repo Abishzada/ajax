@@ -17,10 +17,10 @@
             <h1>You are welcome</h1>
         </div>
         <div class="row">
-            <h2>Students schedule</h2>
+            <h2>Images</h2>
             <div class="col-12">
                 <ul id="list">
-
+                  
                 </ul>
                 <button class="btn btn-primary" id="load">Press</button>
             </div>
@@ -34,8 +34,8 @@
                 url: '/ajax/items.html'
             }).done(function (result) {
                 let obj = JSON.parse(result)
-                obj.students.forEach(student => {
-                    $('#list').append('<li>' + student + '</li>')
+                obj.images.forEach(student => {
+                    $('#list').append('<img src="' + student + '">')
                 })
             })
         })
