@@ -19,9 +19,9 @@
         <div class="row">
             <h2>Images</h2>
             <div class="col-12">
-                <ul id="list">
-                
-                </ul>
+                <div id="info">
+
+                </div>
                 <button class="btn btn-primary" id="load">Press</button>
             </div>
         </div>
@@ -31,20 +31,10 @@
     <script>
         $('#load').on('click', function () {
             $.ajax({
-                url: '/ajax/items.html',
+                url: 'http://www.omdbapi.com/?i=tt3896198&apikey=546319e6',
                 dataType: 'json'
             }).done(function (result) {
-                
-                $('body').css({
-                    background: result.background
-                })
-
-                $('h1').css(result.h1)
-
-                result.images.forEach(student => {
-                    console.log(result)
-                    $('#list').append( '<li>' + '<img src="' + student + '">' + '</li>')
-                })
+                console.log(result)
             })
         })
     </script>
